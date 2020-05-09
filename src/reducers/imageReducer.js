@@ -1,4 +1,4 @@
-import IMAGES from "../constants";
+import { IMAGES } from "../constants";
 
 const imagesReducer = (state = [], action) => {
   if (action.type === IMAGES.LOAD_SUCCESS) {
