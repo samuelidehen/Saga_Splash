@@ -4,7 +4,7 @@ const loadImages = () => ({
   type: IMAGES.LOAD,
 });
 
-const setIamges = (images) => ({
+const setImages = (images) => ({
   type: IMAGES.LOAD_SUCCESS,
   images,
 });
@@ -14,4 +14,4 @@ const setError = (error) => ({
   error,
 });
 
-export { loadImages, setIamges, setError };
+export { loadImages, setImages, setError };

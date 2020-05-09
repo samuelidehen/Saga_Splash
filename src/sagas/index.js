@@ -1,9 +1,7 @@
-import { takeEvery } from "redux-saga/effects";
+import { all } from "redux-saga/effects";
 
-function* workersaga() {
-  yield console.log("WORLD");
-}
+import imagesSaga from "./imagesSaga";
 
 export default function* rootSaga() {
-  yield takeEvery("Hello", workersaga);
+  yield all([imagesSaga()]);
 }
