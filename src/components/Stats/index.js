@@ -4,7 +4,6 @@ import "./styles.css";
 
 const Stats = ({ stats }) => {
   if (!stats) {
-    // loading not yet started
     return <span className="stats">Loading...</span>;
   }
   return (
