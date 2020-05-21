@@ -10,7 +10,7 @@ export function* handleStatsRequest(id) {
       yield put(loadImageStats(id));
       const res = yield call(fetchImageStats, id);
       yield put(setImageStats(id, res.downloads.total));
-      // image was loaded so we exit the generator
+
       return true;
     } catch (e) {}
   }
@@ -19,7 +19,6 @@ export function* handleStatsRequest(id) {
 
 export default function* watchStatsRequest() {
   while (true) {
-    // we get the action here
     const { images } = yield take(IMAGES.LOAD_SUCCESS);
 
     for (let i = 0; i < images.length; i++) {
